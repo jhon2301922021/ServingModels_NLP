@@ -49,3 +49,8 @@ def callback():
     session['credentials'] = flow.credentials.to_json()
     # Devolver las credenciales como respuesta
     return session['credentials']
+
+@app.route('/home', methods=["GET"])
+def home():
+    # Retorna un simple mensaje de texto
+    return 'Web Service for : GMAIL API'
